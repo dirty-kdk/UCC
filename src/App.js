@@ -9,7 +9,7 @@ function App() {
   const [selectedVacancy, setSelectedVacancy] = useState(null);
   const [showApplicationForm, setShowApplicationForm] = useState(false);
 
-  // Mock vacancy data (замените на запрос к API)
+  
   useEffect(() => {
     const mockVacancies = [
       {
@@ -60,7 +60,7 @@ function App() {
 
   const handleVacancyClick = (vacancy) => {
     setSelectedVacancy(vacancy);
-    setShowApplicationForm(false); // Hide the application form
+    setShowApplicationForm(false); 
   };
 
   const handleApplyClick = () => {
@@ -68,11 +68,10 @@ function App() {
   };
 
   const handleApplicationSubmit = (formData) => {
-    // Здесь должен быть запрос к API для отправки заявки
     console.log('Заявка отправлена:', formData);
     alert('Заявка успешно отправлена!');
-    setShowApplicationForm(false); // Hide form after submit
-    setSelectedVacancy(null); // Clear selected vacancy
+    setShowApplicationForm(false); 
+    setSelectedVacancy(null); 
   };
 
   return (
